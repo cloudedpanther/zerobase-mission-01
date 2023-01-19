@@ -82,7 +82,7 @@
     width: 42px;
     height: 42px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     position: absolute;
     bottom: 20px;
@@ -102,26 +102,24 @@
     width: 112px;
 }
 
-.discovery-list-item:hover .discovery-item-btn::before,
-.discovery-list-item:focus .discovery-item-btn::before {
-    content: "구매하기";
+.discovery-item-btn::before {
+    content: "";
+    opacity: 0;
+    width: 100px;
+    text-align: left;
     font-size: 14px;
     color: white;
+    line-height: 0;
     position: absolute;
     top: 50%;
     left: 20px;
-    transform: translate(0%, -50%);
-    line-height: 0;
+    transform: translate(-50%);
+    transition: all .3s ease-in-out;
 }
 
-.discovery-item-btn::after {
-    content: "";
-    width: 5.5px;
-    height: 5.5px;
-    border-right: 2px solid var(--color-gray-100);
-    border-bottom: 2px solid var(--color-gray-100);
-    position: absolute;
-    bottom: 21px;
-    right: 21px;
-    transform: translate(25%, 50%) rotate(-45deg);
+.discovery-list-item:hover .discovery-item-btn::before,
+.discovery-list-item:focus .discovery-item-btn::before {
+    content: "구매하기";
+    opacity: 1;
+    transform: translate(0%, -50%);
 }
