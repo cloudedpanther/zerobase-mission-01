@@ -1,1 +1,127 @@
-/* CSS 작성 */
+.wrapper {
+    width: 1020px;
+    margin: 0 auto 242px;
+}
+
+.header {
+    margin: 100px 0px 48px;
+    line-height: 0;
+}
+
+.header-logo a img {
+    width: 176px;
+    height: 40px;
+}
+
+.discovery-header {
+    display: flex;
+    align-items: center;
+    padding: 8px 0px 24px;
+}
+
+.discovery-title {
+    font-size: 24px;
+}
+
+.title-partition, .discovery-subtitle  {
+    color: var(--color-gray-600);
+}
+
+.title-partition {
+    margin: 0 10px;
+}
+
+.discovery-list-column {
+    height: 310px;
+}
+
+.discovery-list-column + .discovery-list-column {
+    clear: both;
+    margin-top: 16px;
+}
+
+.discovery-list-column ul {
+    height: 100%;
+}
+
+.discovery-list-item {
+    width: 243px;
+    height: 100%;
+    float: left;
+    position: relative;
+}
+
+.discovery-list-item + .discovery-list-item {
+    margin-left: 16px;
+}
+
+.discovery-list-item.item-lg {
+    width: 502px;
+}
+
+.discovery-item-image {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border: 1px solid var(--color-gray-500);
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.discovery-list-item .discovery-item-image img {
+    margin: 14px 22px 14px 21px;
+}
+
+.discovery-list-item.item-lg .discovery-item-image img {
+    margin: 20px 28px;
+}
+
+.discovery-item-btn {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: var(--color-gray-100);
+    width: 42px;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.discovery-list-item:hover .discovery-item-image,
+.discovery-list-item:focus .discovery-item-image {
+    border-color: var(--color-blue-600);
+}
+
+.discovery-list-item:hover .discovery-item-btn,
+.discovery-list-item:focus .discovery-item-btn {
+    background-color: var(--color-blue-600);
+    width: 112px;
+}
+
+.discovery-list-item:hover .discovery-item-btn::before,
+.discovery-list-item:focus .discovery-item-btn::before {
+    content: "구매하기";
+    font-size: 14px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translate(0%, -50%);
+    line-height: 0;
+}
+
+.discovery-item-btn::after {
+    content: "";
+    width: 5.5px;
+    height: 5.5px;
+    border-right: 2px solid var(--color-gray-100);
+    border-bottom: 2px solid var(--color-gray-100);
+    position: absolute;
+    bottom: 21px;
+    right: 21px;
+    transform: translate(25%, 50%) rotate(-45deg);
+}
